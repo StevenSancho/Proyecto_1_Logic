@@ -1,4 +1,4 @@
-module(
+module bin_to_7seg(
     input logic [3:0] bin_in, //ENtrada binaria
     output logic [6:0] seg //Salida al display de 7 seg
 );
