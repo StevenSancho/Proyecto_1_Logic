@@ -1,6 +1,6 @@
 module gray_decoder_system(
     input logic [3:0] gray_in, // Entrada codigo gray
-    output logic [3:0] leds, // Salida a los leds de la FPGA
+    output logic [3:0] led, // Salida a los leds de la FPGA
     output logic [6:0] seg // SAlida al 7 segmentos 
 );
 
@@ -14,7 +14,7 @@ module gray_decoder_system(
 
     bin_to_led bin_to_led_inst (
         .bin_in(bin_out),
-        .leds(leds)
+        .led(led)
     );
 
     bin_to_7seg bin_to_7seg_inst(

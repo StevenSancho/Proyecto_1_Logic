@@ -5,7 +5,7 @@ module gray_to_bin_dec;
     // Señales de testbench
     logic [3:0] gray_in;
     logic [3:0] bin_out;
-    logic [3:0] leds;
+    logic [3:0] led;
     logic [6:0] seg;
 
     // Instanciación de los módulos
@@ -16,7 +16,7 @@ module gray_to_bin_dec;
 
     bin_to_led DUT_led (
         .bin_in(bin_out),
-        .leds(leds)
+        .led(led)
     );
 
     bin_to_7seg DUT_seg (
@@ -44,7 +44,7 @@ module gray_to_bin_dec;
     // Monitoreo de resultados
     initial begin
         $monitor("Tiempo: %0dns, Gray: %b, Binario: %b, LEDs: %b, 7Seg: %b", 
-                 $time, gray_in, bin_out, leds, seg);
+                 $time, gray_in, bin_out, led, seg);
     end
 
     // Generación de archivo VCD para visualización de formas de onda

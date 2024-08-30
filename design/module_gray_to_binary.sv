@@ -4,29 +4,14 @@ module gray_to_binary(
     output logic [3:0] binario_out
 );
 
-    // Función para convertir código Gray a binario
-    function logic [3:0] gray_to_binary(input logic [3:0] gray);
-        logic [3:0] binario;
-        
-        // MSB del código Gray es igual al del código binario
-        binario[3] = gray[3];
+    // Asignaciones continuas para convertir Gray a binario
+    assign binario_out[3] = gray_in[3];
+    assign binario_out[2] = (gray_in[3] & ~(gray_in[2])) | (~(gray_in[3]) & gray_in[2]);
+    assign binario_out[1] = (~(binario_out[2]) & gray_in[1]) | ((binario_out[2]) & ~(gray_in[1]));
+    assign binario_out[0] = (binario_out[1] & ~(gray_in[0])) | (~(binario_out[1]) & gray_in[0]);
 
-        // binario[2] 
-        binario[2] = (gray[3] & ~(gray[2])) | (~(gray[3]) & gray[2]);
-
-        // binario[1]
-        binario[1] = (~(binario[2]) & gray[1]) | ((binario[2]) & ~(gray[1]));
-
-        // binario[0]
-        binario[0] = (binario[1] & ~(gray[0])) | (~(binario[1]) & gray[0]);
-
-        return binario;
-    endfunction
-
-    // Bloque combinacional para llamar a la función y asignar el resultado
-    always_comb begin
-        binario_out = gray_to_binary(gray_in);
-    end
 endmodule
+
+
 
 
