@@ -26,7 +26,7 @@ TOP_DESIGN = gray_decoder_system
 TOP_TB     = gray_to_bin_dec
 
 #nombre del vcd que va a generar el tb
-VCD_FILE = Resultados.vc
+VCD_FILE = Resultados.vcd
 
 
 all: synth pnr bitstream load
