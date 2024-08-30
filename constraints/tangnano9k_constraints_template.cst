@@ -1,56 +1,68 @@
-IO_LOC  "rst" 3;
-IO_PORT "rst" IO_TYPE=LVCMOS18;
 
-IO_LOC  "anode[0]" 56;
-IO_PORT "anode[0]" IO_TYPE=LVCMOS33;
 
-IO_LOC  "anodo[1]" 57;
-IO_PORT "anodo[1]" IO_TYPE=LVCMOS33;
+// Asignaciones de pines para el display de 7 segmentos
+IO_LOC "seg_out[6]" 29; 
+IO_PORT "seg_out[6]" IO_TYPE=LVCMOS33; // Cathode g
 
-IO_LOC  "gray_in[3]" 25;
-IO_PORT "gray_in[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_LOC "seg_out[5]" 30;
+IO_PORT "seg_out[5]" IO_TYPE=LVCMOS33; // Cathode f
 
-IO_LOC  "gray_in[2]" 26;
-IO_PORT "gray_in[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_LOC "seg_out[0]" 51; 
+IO_PORT "seg_out[0]" IO_TYPE=LVCMOS33; // Cathode e
 
-IO_LOC  "gray_in[1]" 27;
-IO_PORT "gray_in[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_LOC "seg_out[1]" 42; 
+IO_PORT "seg_out[1]" IO_TYPE=LVCMOS33; // Cathode d
 
-IO_LOC  "gray_in[0]" 28;
-IO_PORT "gray_in[0]" IO_TYPE=LVCMOS33;
+IO_LOC "seg_out[4]" 53; 
+IO_PORT "seg_out[4]" IO_TYPE=LVCMOS33; // Cathode c
 
-IO_LOC  "led_out[3]" 14;
-IO_PORT "led_out[3]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN;
+IO_LOC "seg_out[3]" 54; 
+IO_PORT "seg_out[3]" IO_TYPE=LVCMOS33; // Cathode b
 
-IO_LOC  "led_out[2]" 13;
-IO_PORT "led_out[2]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN;
+IO_LOC "seg_out[2]" 55; 
+IO_PORT "seg_out[2]" IO_TYPE=LVCMOS33; // Cathode a
 
-IO_LOC  "led_out[1]" 11;
-IO_PORT "led_out[1]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN;
+// Asignaciones de pines para los ánodos del display de 7 segmentos
+// IO_LOC "anodo_po[1]" 57; 
+// IO_PORT "anodo_po[1]" IO_TYPE=LVCMOS33; // Anode digit 1
 
-IO_LOC  "led_out[0]" 10;
-IO_PORT "led_out[0]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN;
+// IO_LOC "anodo_po[0]" 56; 
+// IO_PORT "anodo_po[0]" IO_TYPE=LVCMOS33; // Anode digit 0
 
-IO_LOC  "seg_out[2]" 42;
-IO_PORT "seg_out[2]" IO_TYPE=LVCMOS33;
+// Asignaciones de pines para los LEDs
+IO_LOC "led_out[0]" 10;
+IO_PORT "led_out[0]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN; // Led [0]
 
-IO_LOC  "seg_out[3]" 51;
-IO_PORT "seg_out[3]" IO_TYPE=LVCMOS33;
+IO_LOC "led_out[1]" 11;
+IO_PORT "led_out[1]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN; // Led [1]
 
-IO_LOC  "seg_out[4]" 53;
-IO_PORT "seg_out[4]" IO_TYPE=LVCMOS33;
+IO_LOC "led_out[2]" 13; 
+IO_PORT "led_out[2]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN; // Led [2]
 
-IO_LOC  "seg_out[1]" 30;
-IO_PORT "seg_out[1]" IO_TYPE=LVCMOS33;
+IO_LOC "led_out[3]" 14; 
+IO_PORT "led_out[3]" DRIVE=8 IO_TYPE=LVCMOS18 PULL_MODE=DOWN; // Led [3]
 
-IO_LOC  "seg_out[0]" 29;
-IO_PORT "seg_out[0]" IO_TYPE=LVCMOS33;
+// Asignaciones de pines para las entradas de Gray
+IO_LOC "codigo_gray_pi[0]" 28; 
+IO_PORT "codigo_gray_pi[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN; // Input gray [0]
 
-IO_LOC  "seg_out[5]" 54;
-IO_PORT "seg_out[5]" IO_TYPE=LVCMOS33;
+IO_LOC "codigo_gray_pi[1]" 27; 
+IO_PORT "codigo_gray_pi[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN; // Input gray [1]
 
-IO_LOC  "seg_out[6]" 55;
-IO_PORT "seg_out[6]" IO_TYPE=LVCMOS33;
+IO_LOC "codigo_gray_pi[2]" 26; 
+IO_PORT "codigo_gray_pi[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN; // Input gray [2]
 
-IO_LOC  "clk" 52;
-IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC "codigo_gray_pi[3]" 25; 
+IO_PORT "codigo_gray_pi[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN; // Input gray [3]
+
+
+
+
+
+
+
+
+
+
+
+
