@@ -50,7 +50,7 @@ module gray_to_bin_dec;
     // Generación de archivo VCD para visualización de formas de onda
     initial begin
         $dumpfile("Resultados.vcd");
-        $dumpvars(0, testbench);
+        $dumpvars(0, gray_to_bin_dec);
     end
 
 endmodule
