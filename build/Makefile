@@ -19,7 +19,7 @@ TESTBENCH = ../sim/module_gtb_tb.sv
 
 # Constraints para el proyecto
 #aca va el archivo de constraints del proyecto
-CONSTRAINTS = ../constr/tangnano9k_constraints_template.txt
+CONSTRAINTS = ../constraints/tangnano9k_constraints_template.txt
 
 #el top se indica sin la extension .v, esto hace referencia al nombre que le pusieron al módulo y no al archivo en si.
 TOP_DESIGN = gray_decoder_system  
