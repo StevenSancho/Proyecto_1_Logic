@@ -23,7 +23,7 @@ CONSTRAINTS = ../constraints/tangnano9k_constraints_template.cst
 
 #el top se indica sin la extension .v, esto hace referencia al nombre que le pusieron al módulo y no al archivo en si.
 TOP_DESIGN = gray_decoder_system  
-TOP_TB     = gray_to_bin_dec
+TOP_TB     = gray_decoder_system_tb
 
 #nombre del vcd que va a generar el tb
 VCD_FILE = Resultados.vcd
