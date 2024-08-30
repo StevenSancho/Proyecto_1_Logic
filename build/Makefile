@@ -15,15 +15,15 @@ SOURCES := $(wildcard ../design/*.v ../design/*.sv) #Todas las fuentes .v o .sv 
 
 #Fuente de simulacion
 #aca va el testbench que quieran simular
-TESTBENCH = ../sim/module_gray_to_binario.sv
+TESTBENCH = ../sim/module_gtb_tb.sv
 
 # Constraints para el proyecto
 #aca va el archivo de constraints del proyecto
-CONSTRAINTS = ../constr/module_gray_to_binario.cst
+CONSTRAINTS = ../constr/tangnano9k_constraints_template.txt
 
 #el top se indica sin la extension .v, esto hace referencia al nombre que le pusieron al módulo y no al archivo en si.
-TOP_DESIGN = module_gray_to_binario   
-TOP_TB     = module_gray_to_binario_tb
+TOP_DESIGN = gray_decoder_system  
+TOP_TB     = gray_to_bin_dec
 
 #nombre del vcd que va a generar el tb
 VCD_FILE = module_gray_to_binario.vcd
