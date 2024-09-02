@@ -23,11 +23,12 @@ IO_LOC "seg_out[2]" 55;
 IO_PORT "seg_out[2]" IO_TYPE=LVCMOS33; // Cathode a
 
 // Asignaciones de pines para los ánodos del display de 7 segmentos
-// IO_LOC "anodo_po[1]" 57; 
-// IO_PORT "anodo_po[1]" IO_TYPE=LVCMOS33; // Anode digit 1
+IO_LOC "an[1]" 57; 
+IO_PORT "an[1]" IO_TYPE=LVCMOS33; // Anode digit 1
 
-// IO_LOC "anodo_po[0]" 56; 
-// IO_PORT "anodo_po[0]" IO_TYPE=LVCMOS33; // Anode digit 0
+IO_LOC "an[0]" 56; 
+IO_PORT "an[0]" IO_TYPE=LVCMOS33; // Anode digit 0
+
 
 // Asignaciones de pines para los LEDs
 IO_LOC "led_out[0]" 10;
