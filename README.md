@@ -2,7 +2,7 @@
 
 **Participantes:**
 - Steven Sancho Orozco
-- Nombre 
+- Alonso Román Rodríguez
 
 **Profesor:**
 Alfonso Chacón Rodriguez
