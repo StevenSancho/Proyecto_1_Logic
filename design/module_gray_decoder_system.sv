@@ -24,7 +24,7 @@
 endmodule*/
 
 module gray_decoder_system(
-    input logic [3:0] gray_in,  // Entrada codigo gray
+    input logic [3:0] gray_in,  // Entrada código Gray
     output logic [3:0] led,     // Salida a los LEDs de la FPGA
     output logic [6:0] seg,     // Salida común a ambos displays
     output logic [1:0] an       // Anodos para seleccionar el display
@@ -45,11 +45,13 @@ module gray_decoder_system(
         .led(led)
     );
 
-    // Instanciar el módulo que controla los displays de 7 segmentos y los anodos
+    // Instanciar el módulo que controla los displays de 7 segmentos y los ánodos
     bin_to_7seg bin_to_7seg_inst (
         .bin_in(bin_out),
         .seg(seg),
-        .an(an)
+        .anode0(an[0]),  // Conectar anode0 al bit 0 de 'an'
+        .anode1(an[1])   // Conectar anode1 al bit 1 de 'an'
     );
 
 endmodule
+

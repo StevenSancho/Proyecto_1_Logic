@@ -6,12 +6,14 @@ module gray_decoder_system_tb;
     logic [3:0] gray_in;    // Entrada código Gray
     logic [3:0] led;        // Salida a los LEDs
     logic [6:0] seg;        // Salida al display de 7 segmentos
+    logic [1:0] an;         // Salida a los ánodos de los displays
 
     // Instancia del módulo bajo prueba (DUT)
     gray_decoder_system DUT (
         .gray_in(gray_in),
         .led(led),
-        .seg(seg)
+        .seg(seg),
+        .an(an)
     );
 
     // Generación de estímulos
@@ -31,8 +33,8 @@ module gray_decoder_system_tb;
 
     // Monitoreo de resultados
     initial begin
-        $monitor("Tiempo: %0dns, Gray: %b, LEDs: %b, 7Seg: %b", 
-                 $time, gray_in, led, seg);
+        $monitor("Tiempo: %0dns, Gray: %b, LEDs: %b, 7Seg: %b, Anodos: %b", 
+                 $time, gray_in, led, seg, an);
     end
 
     // Generación de archivo VCD para visualización de formas de onda
